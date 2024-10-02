@@ -113,7 +113,6 @@ func (c *Cart) ApplyDiscounts() float64 {
 	return total
 }
 
-// Freebie functions
 func (c *Cart) ApplyFreebie(productID string, freebieID string) {
 	if item, exists := c.Items[productID]; exists && item.Quantity > 0 {
 		c.AddProduct(freebieID, 0, 1)
